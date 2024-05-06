@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<style>
+    #property-details{
+        height: auto;
+        width: 100vw;
+        padding-top: 100px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 50px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.148),rgba(0, 0, 0, 0.664));
+        background-color: rgba(0, 0, 0, 0.148);
+    }
+    #property-details .main-heading{
+        height: auto;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 110%;
+    letter-spacing: -1%;
+    text-align: center;
+    align-items: top;
+    padding-bottom: 20px;
+    
+    }
+
+    #property-details .mini-heading{
+        text-decoration: underline;
+        font-size: 28px;
+    }
+
+
+    
+.container {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	gap: 1em;
+	width: 100vw;
+	height: 500px;
+	transition: all 400ms;
+    margin-top: 70px;
+}
+
+.container:hover .box {
+	filter: grayscale(100%) opacity(24%);
+}
+
+.box {
+	position: relative;
+	background: var(--img) center center;
+	background-size: cover;
+	transition: all 400ms;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container .box:hover {
+	filter: grayscale(0%) opacity(100%);
+}
+
+.container:has(.box-1:hover) {
+	grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+}
+
+.container:has(.box-2:hover) {
+	grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+}
+
+.container:has(.box-3:hover) {
+	grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+}
+
+.container:has(.box-4:hover) {
+	grid-template-columns: 1fr 1fr 1fr 3fr 1fr;
+}
+
+.container:has(.box-5:hover) {
+	grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
+}
+
+.box:nth-child(odd) {
+	transform: translateY(-16px);
+}
+
+.box:nth-child(even) {
+	transform: translateY(16px);
+}
+
+.box::after {
+	content: attr(data-text);
+	position: absolute;
+	bottom: 20px;
+	background: #000;
+	color: #fff;
+	padding: 10px 10px 10px 14px;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	transform: translateY(60px);
+	opacity: 0;
+	transition: all 400ms;
+}
+
+.box:hover::after {
+	transform: translateY(0);
+	opacity: 1;
+	transition-delay: 400ms;
+}
+
+.property-card{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+
+    border-radius: 20px;
+    border-style: solid;
+    border-width: 4px;
+border-color: #000000a2;
+
+    box-shadow: 10px 10px 0 #ffea0087, 20px 20px 0 #ffd90037, 30px 30px 0 #000000a9;
+    justify-content: center;
+    gap: 20px;
+    background-color: white;
+    z-index: 0;
+
+}
+.property-card li{
+    list-style-type: none;
+}
+
+.card-container{
+    display: flex;
+        justify-content: center; /* Horizontally center the content */
+        align-items: center; /* Vertically center the content */
+        padding: 0 20px; /* Optional: Add padding */
+        gap: 100px;
+        margin-top: 100px;
+        box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+</style>
+<body>
+
+   
+    <nav style="display: flex; gap:40px; position: fixed; width: 100vw;" class="navbar navbar-expand-lg navbar-light ">
+        <a class="navbar-brand" href="yoliv.html" style="margin-left: 50px;"><img src="./images/logo.png" alt=""></a>
+
+        <div class="navbar-nav" style="display: flex; gap: 40px;">
+            <a class="nav-item nav-link" href="yoliv-properties.html">Explore</a>
+            <a class="nav-item nav-link" href="#">About us</a>
+        </div>
+
+        
+        <div class=" item button-parrot" style=" position: absolute; right:45px;">
+            <a href="Booking-form.html"><button class="book-button type2">Book Now!
+              <div class="parrot"></div>
+              <div class="parrot"></div>
+              <div class="parrot"></div>
+              <div class="parrot"></div>
+              <div class="parrot"></div>
+              <div class="parrot"></div>
+            </button>
+        </a>
+          </div>
+    </nav>
+
+    <main>
+
+        <section id="property-details">
+            <div class="main-heading">
+                Astrum, Yoliv
+            </div>
+
+            <div class="mini-heading">
+                Ambawadi
+            </div>
+
+            <div class="container">
+                <div class="box box-1" style="--img: url(./images/nova/beds.jpg);" data-text="Beds"></div>
+                <div class="box box-2" style="--img: url(./images/nova/cupboards.jpg);" data-text="Cupboards"></div>
+                <div class="box box-3" style="--img: url(./images/nova/dining.jpg);" data-text="Dining"></div>
+                <div class="box box-4" style="--img: url(./images/nova/kitchen.jpg);" data-text="Kitchen"></div>
+                <div class="box box-5" style="--img: url(./images/nova/study-table.jpg);" data-text="study-table"></div>
+              </div>
+
+
+              <div class="card-container">
+                <div class="property-card">
+                    <h3 style="font-weight: 550;">Amenities</h5>
+                    <ul>
+    
+                        <li>Beds</li>
+                        <li>Cupboards</li>
+                        <li> pillows</li>
+                        <li>Mattress</li>
+                        <li> bed sheet</li>
+                        <li> desk</li>
+                        <li> Shower</li>
+                        <li>Mirror</li>
+                        <li> Geyser</li>
+                        <li>Basin</li>
+                        
+                        
+                        
+                        
+                    </ul>
+                  </div>
+                  <div class="property-card">
+                    <h3 style="font-weight: 550;">Add Ons</h5>
+                    <ul>
+    
+                        <li>Washing Machine</li>
+                        <li>Fridge</li>
+                        <li> Induction</li>
+                        <li>Water Purifier</li>
+                        <li> Iron</li>
+                        <li> Microwave</li>
+                        <li> Toaster</li>
+                        <li>Gym</li>
+                        <li> Dining Table</li>                           
+                        
+                    </ul>
+                  </div>
+                  <div class="property-card">
+                    <h3 style="font-weight: 550;">Additional Details</h5>
+                    <h5 style="font-weight: 550;">Rent : 11,000 Onwards</h5>
+
+                    <button class="button type1" type="button" style="margin:0; width: 75%; align-self: center;" onclick="window.open('./brochures/Astrum.pdf')">
+                        <span class="btn-txt">Download Brochure</span>
+                      </button>
+                    <a href="Booking-form.html"> <button class="button type1" type="button" style="margin:0; width: 75%; align-self: center;">
+                        <span class="btn-txt">Book Now</span>
+                      </button></a>
+
+
+                  </div>
+              </div>
+              
+        </section>
+        
+    </main>
+
+    <footer>
+        <div style="display: flex; gap: 100px;height: 20vh;">
+            <img src="./images/logo1.png" alt="" style="margin-left: 100px; justify-content: center;">
+
+            <div
+                style="display: flex;  justify-content: center; align-items: center; gap: 70px; margin-left: 100px; text-decoration: none; ">
+                <a href="yoliv-properties.html">Explore</a>
+                <a href="#">About us</a>
+
+            </div>
+
+            <div class="social-media-links">
+                <a href="#"><img src="./images/instagram.png" alt=""></a>
+                <a href="#"><img src="./images/linkedin.png" alt=""></a> 
+                <a href="#"><img src="./images/facebook.png" alt=""></a>
+                <a href="#"><img src="./images/twitter.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="styles.css">
+        <style>
+
+.button {
+  position: sticky;
+  border: 3px solid #00000047;
+
+  color: #323232;
+  width: 300px;
+  margin-left: 0;
+  margin-top: 10px;
+  font-weight: 500;
+  font-variant: small-caps;
+  font-size: larger;
+}
+
+.button:hover {
+  box-shadow: 5px 3px 0 #ffea0087, 10px 6px 0 #00000037;
+    
+  border-style: solid;
+  border-color: #000000;
+}
+
+
+       </style>
+</head>
+<body >
+
+    <nav style="display: flex; gap:40px; position: fixed; width: 100vw;" class="navbar navbar-expand-lg navbar-light ">
+        <a class="navbar-brand" href="yoliv.html" style="margin-left: 50px;"><img src="./images/logo.png" alt=""></a>
+
+        <div class="navbar-nav" style="display: flex; gap: 40px;">
+            <a class="nav-item nav-link" href="yoliv-properties.html">Explore</a>
+            <a class="nav-item nav-link" href="#">About us</a>
+        </div>
+
+    </nav>
+
+    <main style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.384), rgba(0, 0, 0, 0.367))">
+        <section style=" height: 100vh; width: 100vw; display: flex; flex-direction: column; background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(247, 241, 76, 0.299))">
+            <form class="form" action="https://formspree.io/f/mleqrkyr"
+            method="POST">
+                <div class="title" style="font-size: 34px; font-family: 'Plus Jakarta Sans', sans-serif;">Book A Slot<br><span style="font-size: 20px; text-align: center; ">Fill the details</span></div>
+                <input type="text" placeholder="Name" name="name" class="input" required>
+                <input type="email" placeholder="Email" name="email" class="input" required>
+                <input type="tel" name="phone" pattern="\d{10}" required class="input" placeholder="Phone No.">
+                <input type="date" placeholder="pick a date" name="date" class="input" required>
+                <select id="country" name="country" required>
+                    <option value="">Select a PG</option>
+                    <option value="Nova, Navrangpura">Nova, Navrangpura</option>
+                    <option value="Nebula, Satellite">Nebula, Satellite</option>
+                    <option value="Astrum, Ambawadi">Astrum, Ambawadi</option>
+                    <option value="Galaxy, Navrangpura">Galaxy, Navrangpura</option>
+                  </select>
+                <textarea name="message" rows="4" placeholder="Message"></textarea>
+                
+          
+                <button class="button type1" type="submit">
+                        <span class="btn-txt">submit</span>
+                      </button>
+              </form>
+        </section>
+    </main>
+    <footer>
+        <div style="display: flex; gap: 100px;height: 20vh;">
+            <img src="./images/logo1.png" alt="" style="margin-left: 100px; justify-content: center;">
+
+            <div
+                style="display: flex;  justify-content: center; align-items: center; gap: 70px; margin-left: 100px; text-decoration: none; ">
+                <a href="yoliv-properties.html">Explore</a>
+                <a href="#">About us</a>
+
+            </div>
+
+            <div class="social-media-links">
+                <a href="#"><img src="./images/instagram.png" alt=""></a>
+                <a href="#"><img src="./images/linkedin.png" alt=""></a> 
+                <a href="#"><img src="./images/facebook.png" alt=""></a>
+                <a href="#"><img src="./images/twitter.png" alt=""></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
