@@ -99,7 +99,7 @@ nav ul{
         cursor: pointer;
         padding-bottom: 10px;
         position:fixed;
-        left:50px;
+        left:30px;
     }
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
@@ -127,6 +127,23 @@ nav ul{
         font-weight: 600;
     }
 
+
+    #section-1{
+        height: 100vh;
+        padding-bottom: 0;
+    }
+    
+    #benefit .outer-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #benefit .heading-container{
+        margin: 0;
+        padding-top: 10%;
+    }
+
 .button-parrot .parrot:before {
     font-weight: 100;
 
@@ -136,10 +153,42 @@ nav ul{
 left: 90px;
 }
 
+.button-parrot{
+    right: 10px;
+}
+
 .type2{
     visibility: hidden;
 }
+
+#section-1 .heading-container{
+
 }
+#section-1 .main-heading{
+    text-align: center;
+    font-size: 34px;
+    padding: 0 5%;
+}
+
+#section-1 .mini-heading{
+
+    font-size: 10px;
+}
+
+.properties-container p{
+    font-size: 16px;
+    padding: 0 5%;
+
+}
+
+.properties-container button{
+    height: 28px;
+    width: 101;
+    font-size: 12px;
+}
+
+}
+
 
 @media only screen and (max-width:500px){
     .mobile-logo{
@@ -200,10 +249,10 @@ left: 90px;
         <ul  class="nav-menu" style="display: flex; gap: 60px;">
         <a  href="index.html" style="margin-left: 50px;" class="nav-item"><img src="./images/logo.png" alt=""></a>
 
-            <a href="#" class="nav-item"><li>
+            <a href="yoliv-properties.html" class="nav-item"><li>
                 Explore</li></a>
             <a href="#" class="nav-item"><li>
-                explore</li></a>
+                About us</li></a>
         </ul>
 
 
@@ -256,7 +305,7 @@ left: 90px;
                     <p class="animated-text">Properties all across Ahmedabad in all major areas</p>
                 </div>
 
-                <div class="button-container" style="display: flex; flex-direction: row; gap: 61px; margin-left: -5%;">
+                <div class="button-container" style="">
                     <button class="animated-button" disabled>Navrangpura</button>
                     <button class="animated-button" disabled>Shyamal</button>
                     <button class="animated-button" disabled>Paladi</button>
@@ -273,7 +322,7 @@ left: 90px;
         </section>
 
         <section id="benefit">
-            <div style="display: flex;">
+            <div class="outer-container">
                 <div class="heading-container" style="display: flex; flex-direction: column; gap: 20px; justify-content: center; text-align: center; align-items: center;">
                     <p class="main-heading">The new way to find your new home</p>
                     <p class="mini-heading"> Find your dream place to live in with more than 100+ properties listed.</p>
