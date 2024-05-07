@@ -54,7 +54,7 @@ nav ul{
     list-style-type: none;
 }
 .navbar{
-    display: flex; gap:40px; position: fixed; width: 100vw; padding-top: 20px; align-items: center; align-content: center;
+    display: flex; gap:40px; position: fixed; width: 100vw; padding-top: 20px; align-items: center; align-content: center; top: 0;
 }
 .mobile-logo{
     display: none;
@@ -137,12 +137,69 @@ nav ul{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+       padding: 10% 0;
     }
 
     #benefit .heading-container{
         margin: 0;
+        
+    }
+
+    #benefit .inner-container{
+        display: flex;
+        flex-direction: column;
+        grid-column-gap: 0;
+        gap: 15%;
+        padding: 0;
+        margin: 0;
         padding-top: 10%;
     }
+
+    #benefit .inner-container .sub-inner-container{
+        flex-direction: row;
+        gap: 5%;
+        align-items: center;
+        height: fit-content;
+    }
+
+    #benefit .inner-container div:nth-child(3){
+        text-wrap: nowrap;
+        
+    }
+    
+    #benefit .inner-container .sub-inner-container .mini-heading{
+    display: none;
+}
+
+
+
+#property-listings .card-container {
+  display: flex; /* Allow horizontal arrangement */
+  flex-wrap: nowrap; /* Prevent wrapping onto multiple lines */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on WebKit browsers */
+  height: 50vh;
+  margin: 0;
+  justify-content: normal;
+  align-items: normal;
+
+  overflow-y: hidden;
+  width: 100vw;
+  padding: 70px 0 500px 50px;
+}
+
+
+
+.article-wrapper {
+/* Adjust as needed */
+margin: 0;
+  flex-shrink: 0; /* Prevent cards from shrinking smaller than their content */
+  margin-right: 20px; /* Space between the cards */
+  height: 450px;
+  
+}
+
+
 
 .button-parrot .parrot:before {
     font-weight: 100;
@@ -161,14 +218,47 @@ left: 90px;
     visibility: hidden;
 }
 
-#section-1 .heading-container{
 
-}
-#section-1 .main-heading{
+ #section-1 .main-heading{
+    padding: 0;
+    padding-top: 5%;
     text-align: center;
     font-size: 34px;
-    padding: 0 5%;
+    justify-content: center;
+    align-self: center;
 }
+
+#tenants-and-landlords .main-heading{
+ 
+    display: none;
+}
+#tenants-and-landlords {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    height: auto;
+}
+
+#tenants-and-landlords .mobile-main-heading{
+    display:initial;
+    font-size: 28px;
+    font-weight: bold;
+   
+}
+#tenants-and-landlords .outer-container{
+    padding: 0;
+    margin: 0;
+    gap: 30px;
+}
+
+
+#tenants-and-landlords .container{
+    display: none;
+}
+
+#tenants-and-landlords hr{
+    display: none;
+}
+
 
 #section-1 .mini-heading{
 
@@ -184,6 +274,20 @@ left: 90px;
 .properties-container button{
     height: 28px;
     width: 101;
+    font-size: 12px;
+}
+.vertical-line{
+    display: none;
+}
+
+.counterContainer{
+font-size: 24px;
+}
+.number-sign{
+    font-size: 25px;
+}
+
+.number-name{
     font-size: 12px;
 }
 
@@ -323,7 +427,7 @@ left: 90px;
 
         <section id="benefit">
             <div class="outer-container">
-                <div class="heading-container" style="display: flex; flex-direction: column; gap: 20px; justify-content: center; text-align: center; align-items: center;">
+                <div class="heading-container">
                     <p class="main-heading">The new way to find your new home</p>
                     <p class="mini-heading"> Find your dream place to live in with more than 100+ properties listed.</p>
 
@@ -333,33 +437,32 @@ left: 90px;
 
                 </div>
 
-                <div
-                    style="display:grid; grid-template-columns: repeat(2, 1fr); grid-column-gap: 80px; margin-top: 100;">
-                    <div style="height: 218px; width: 308px; display: flex; flex-direction: column;">
+                <div class="inner-container">
+                    <div class="sub-inner-container">
                         <img src="./images/home icon.png" alt="" style="height: 64; width: 64;">
-                        <p style="font-weight: bold; font-size: 24;">Essentials Nearby</p>
-                        <p style="font-size: 16;">Get all the essentials near your locations and always get what you
+                        <p class="main-heading">Essentials Nearby</p>
+                        <p class="mini-heading">Get all the essentials near your locations and always get what you
                             need whenever you need.</p>
 
                     </div>
-                    <div style="height: 218px; width: 308px; display: flex; flex-direction: column;">
+                    <div class="sub-inner-container">
                         <img src="./images/dollar icon.png" alt="" style="height: 64; width: 64;">
-                        <p style="font-weight: bold; font-size: 24;">Best Price</p>
-                        <p style="font-size: 16;">Not sure what you should be charging for your property? No need to
+                        <p class="main-heading">Best Price</p>
+                        <p class="mini-heading">Not sure what you should be charging for your property? No need to
                             worry, let us do the numbers for you.</p>
 
                     </div>
-                    <div style="height: 218px; width: 308px; display: flex; flex-direction: column;">
+                    <div class="sub-inner-container">
                         <img src="./images/home icon.png" alt="" style="height: 64; width: 64;">
-                        <p style="font-weight: bold; font-size: 24;">Lowest Commission</p>
-                        <p style="font-size: 16;">You no longer have to negotiate commissions and haggle with other
+                        <p class="main-heading">Lowest Commission</p>
+                        <p class="mini-heading">You no longer have to negotiate commissions and haggle with other
                             agents it only cost 2%!</p>
 
                     </div>
-                    <div style="height: 218px; width: 308px; display: flex; flex-direction: column;">
+                    <div class="sub-inner-container">
                         <img src="./images/home icon.png" alt="" style="height: 64; width: 64;">
-                        <p style="font-weight: bold; font-size: 24;">Overall Control</p>
-                        <p style="font-size: 16;">You can communicate directly with landlords and we provide you with
+                        <p class="main-heading">Overall Control</p>
+                        <p class="mini-heading">You can communicate directly with landlords and we provide you with
                             images before you buy or rent the property.</p>
 
                     </div>
@@ -511,6 +614,9 @@ left: 90px;
                     We make it easy for <br>
                     tenants and landlords.
                 </p>
+                <p class="mobile-main-heading">
+                    Our Numbers
+                </p>
             </div>
 
             <div class="container">
@@ -538,61 +644,60 @@ left: 90px;
             <br>
             <hr style="background-color: black; ">
 
-            <div style="display: flex; justify-content: center; margin-top: 70; gap: 100px;">
-                <div>
-                    <div style="display: flex; flex-direction: column;">
-                        <div style="display: flex; font-size: 40; font-weight: bold;">
+            <div class="outer-container">
+        
+                    <div class="number-container">
+                        <div class="number">
                             <div class="counterContainer" 
                              data-start="75" 
                              data-end="100" 
                              data-duration="3000"
                              style="margin-left: 30px;">
                             </div>
-                            <div style=" font-size: 40;">%</div>
+                            <div class="number-sign">%</div>
 
                         </div>
-                        <div style="font-size: 16; font-weight: 400; color: rgba(0, 0, 0, 0.507);">
+                        <div class="number-name">
                             Satisfied Customers
                         </div>
                     </div>
 
-                </div>
 
-                <div style="background-color: black; width: 1px; height: 50px; margin-top: 20px;"> </div>
+                <div class="vertical-line"> </div>
                 <div>
-                    <div style="display: flex; flex-direction: column; text-align: center; justify-content: center;">
-                        <div style="display: flex; font-size: 40; font-weight: bold;">
+                    <div class="number-container">
+                        <div class="number">
                             <div class="counterContainer" 
                              data-start="75" 
                              data-end="100" 
                              data-duration="3000"
                              style="margin-left: 30px;">
                             </div>
-                            <div style="font-size: 35;">+</div>
+                            <div class="number-sign">+</div>
 
                         </div>
-                        <div style="font-size: 16; font-weight: 400; color: rgba(0, 0, 0, 0.507);">
+                        <div class="number-name">
                             Beds Available
                         </div>
                     </div>
 
                 </div>
 
-                <div style="background-color: black; width: 1px; height: 50px; margin-top: 20px;"> </div>
+                <div class="vertical-line"></div>
 
                 <div>
-                    <div style="display: flex; flex-direction: column; text-align: center; justify-content: center;">
-                        <div style="display: flex; font-size: 40; font-weight: bold;">
+                    <div class="number-container">
+                        <div class="number">
                             <div class="counterContainer" 
                              data-start="125" 
                              data-end="150" 
                              data-duration="3000"
                              style="margin-left: 30px;">
                             </div>
-                            <div style="font-size: 35;">+</div>
+                            <div class="number-sign">+</div>
 
                         </div>
-                        <div style="font-size: 16; font-weight: 400; color: rgba(0, 0, 0, 0.507);">
+                        <div class="number-name">
                            Renters Living In
                         </div>
                     </div>
