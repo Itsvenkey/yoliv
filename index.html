@@ -11,13 +11,167 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
    <link rel="stylesheet" href="styles.css">
+
+   <style>
+
+   
+    .hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+
+.nav-item{
+    align-self: center;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.453);
+}
+
+nav a{
+    text-decoration: none;
+    align-self: center;
+}
+nav a:hover{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.723);
+}
+
+nav ul{
+    list-style-type: none;
+}
+.navbar{
+    display: flex; gap:40px; position: fixed; width: 100vw; padding-top: 20px; align-items: center; align-content: center;
+}
+.mobile-logo{
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+
+  nav{
+    width: 100vw;
+  }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        height: 100vh;
+        flex-direction: column;
+        
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu a:first-child {
+    display: none; 
+} 
+
+.nav-menu a:nth-child(2){
+    padding-top: 60px;
+}
+    .nav-menu.active {
+        left: 0;
+    }
+
+ 
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        padding-bottom: 10px;
+        position:fixed;
+        left:50px;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .mobile-logo{
+        display: initial;
+        padding-left: 0;
+        margin-left: 35%;
+    }
+
+    .book-button{
+        padding: 0;
+        width: 20vw;
+        height: 5vh;
+        font: 10px 'Plus Jakarta Sans', sans-serif;
+        font-weight: 600;
+    }
+
+.button-parrot .parrot:before {
+    font-weight: 100;
+
+}
+
+.button-parrot .parrot:nth-child(5) {
+left: 90px;
+}
+
+.type2{
+    visibility: hidden;
+}
+}
+
+@media only screen and (max-width:500px){
+    .mobile-logo{
+        margin: 0;
+        margin-left:30%;
+    }
+
+
+    .mobile-logo img{
+        scale: 2;
+    }
+
+    .book-button{
+        font-size: 8px;
+        font-weight: bold;
+        height: 4vh;
+    }
+
+    .parrot{
+        display: none;
+    }
+}
+
+   </style>
 </head>
+
 
 <body>
 
    
 
-    <nav style="display: flex; gap:40px; position: fixed; width: 100vw;" class="navbar navbar-expand-lg navbar-light ">
+    <!-- <nav style="display: flex; gap:40px; position: fixed; width: 100vw;" class="navbar navbar-expand-lg navbar-light ">
         <a class="navbar-brand" href="index.html" style="margin-left: 50px;"><img src="./images/logo.png" alt=""></a>
 
         <div class="navbar-nav" style="display: flex; gap: 40px;">
@@ -37,6 +191,46 @@
             </button>
         </a>
           </div>
+    </nav> -->
+
+
+    <nav class="navbar">
+
+
+        <ul  class="nav-menu" style="display: flex; gap: 60px;">
+        <a  href="index.html" style="margin-left: 50px;" class="nav-item"><img src="./images/logo.png" alt=""></a>
+
+            <a href="#" class="nav-item"><li>
+                Explore</li></a>
+            <a href="#" class="nav-item"><li>
+                explore</li></a>
+        </ul>
+
+
+        
+            <div class="button-parrot">
+                <button class="book-button" onclick="window.location.href='Booking-form.html'">Book Now!
+                <div class="parrot"></div>
+                <div class="parrot"></div>
+                <div class="parrot"></div>
+                <div class="parrot"></div>
+                <div class="parrot"></div>
+                <div class="parrot"></div>
+                </button>
+
+
+            
+            </div>
+
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <div class="mobile-logo" >
+            <a  href="index.html" style="margin-left: 50px;" class="nav-item"><img src="./images/logo.png" alt=""></a>
+            </div>
     </nav>
 
     <main>
@@ -442,6 +636,24 @@
 
     
 
+    const hamburger = document.querySelector(".hamburger");
+     const navMenu = document.querySelector(".nav-menu");
+     
+     hamburger.addEventListener("click", mobileMenu);
+     
+     function mobileMenu() {
+         hamburger.classList.toggle("active");
+         navMenu.classList.toggle("active");
+     }
+     
+     const navLink = document.querySelectorAll(".nav-link");
+     
+     navLink.forEach(n => n.addEventListener("click", closeMenu));
+     
+     function closeMenu() {
+         hamburger.classList.remove("active");
+         navMenu.classList.remove("active");
+     }
         
     </script>
     
