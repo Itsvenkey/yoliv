@@ -16,9 +16,10 @@
         filter: opacity(100%);
     }
     .article-wrapper:hover{
-        box-shadow: none;
+        box-shadow: 1px 1px 20px #2525257b;
         transform: none;
         border: none;
+        
     }
 
     .article-wrapper:hover .project-hover{
@@ -29,13 +30,21 @@
         background-color: #f7f14c98;
     }
 
-    .book-button:hover{
-        background-color: none;
-        }
-        
+   
+
+    nav img{
+    filter: none;
+
+    }
 .book-button{
-    background-color: yellow;
+    background-color: #ffc62a82;
+    border-width: 1px;
+
 }
+.book-button:hover{
+    background-color: #ffc62a82 ;
+    }
+    
     
 .button-parrot button:hover .parrot:before{
 content: "";
@@ -47,6 +56,8 @@ content: "";
 }
     
     nav{
+        height: 8%;
+        background: rgb(221, 238, 255);
       width: 100vw;
     }
   
@@ -156,6 +167,14 @@ content: "";
       display: none;
   }
   
+  #benefit .inner-container .sub-inner-container .main-heading{
+    font-size: 22px;
+}
+
+  #benefit .inner-container img{
+    height: 50;
+    width: 50;
+  }
   
   
   #property-listings .card-container {
@@ -194,6 +213,7 @@ content: "";
   
   
   .button-parrot .parrot:before {
+    font-size: 10px;
       font-weight: 100;
   
   }
@@ -411,9 +431,9 @@ background-color: #debb10c8;
 
 
 
-  @media only screen and (max-width:303px){
+  @media only screen and (max-width:350px){
     .mobile-logo{
-        margin-left: 20%;
+        margin-left: 23%;
     }
 
     
