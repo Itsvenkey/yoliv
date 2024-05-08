@@ -1110,6 +1110,9 @@ margin: 0 0.5%;
     padding-top: 10%;
     padding-bottom: 5%;
 }
+#about-us p{
+    word-spacing: 5px; padding: 0 100px; text-justify:distribute;
+}
 
 .mobile-video{
     display: none;
