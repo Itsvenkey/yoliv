@@ -254,10 +254,15 @@ nav {
     margin: 0;
     padding: 0;
     font-weight: bold;
-    font-size: 32;
+    font-size: 32px;
     width: 309;
 }
 
+
+#benefit .inner-container img{
+    height: 64; 
+    width: 64;
+}
 #benefit .heading-container .mini-heading {
     margin: 0;
     padding: 0;
@@ -514,7 +519,7 @@ letter-spacing: 2px;
 }
 
 .book-button:hover{
-background-color: yellow;
+background-color: #ffc72a;
 }
 
 .name {
