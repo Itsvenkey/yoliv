@@ -150,11 +150,14 @@ content: "";
           
       }
   
+      #benefit {
+        padding-bottom: 0;
+      }
       #benefit .inner-container{
           display: flex;
           flex-direction: column;
           grid-column-gap: 0;
-          gap: 15%;
+          gap: 50px;
           padding: 0;
           margin: 0;
           padding-top: 10%;
@@ -414,6 +417,25 @@ background-color: #debb10c8;
 }
 
 
+#about-us{
+    text-align: center;
+    height: auto;
+    width: 100vw;
+    padding-top: 100px;
+    padding-bottom: 5%;
+
+}
+
+#about-us p{
+    word-spacing: 1px; 
+    padding: 0 5%; 
+    text-justify: auto;
+    text-align: center;
+    font-size: small;
+    margin-left: 0;
+
+    width: 100%;
+}
   }
   
   
