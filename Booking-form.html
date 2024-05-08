@@ -12,12 +12,13 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
         <link rel="stylesheet" href="styles.css">
-        <style>
+        <link rel="stylesheet" href="mediaqueries.css">
+
+        <!-- <style>
 
 .button {
   position: sticky;
   border: 3px solid #00000047;
-
   color: #323232;
   width: 300px;
   margin-left: 0;
@@ -35,22 +36,50 @@
 }
 
 
-       </style>
+       </style> -->
 </head>
 <body >
 
-    <nav style="display: flex; gap:40px; position: fixed; width: 100vw;" class="navbar navbar-expand-lg navbar-light ">
-        <a class="navbar-brand" href="index.html" style="margin-left: 50px;"><img src="./images/logo.png" alt=""></a>
+    <nav class="navbar">
 
-        <div class="navbar-nav" style="display: flex; gap: 40px;">
-            <a class="nav-item nav-link" href="yoliv-properties.html">Explore</a>
-            <a class="nav-item nav-link" href="#">About us</a>
+
+        <ul  class="nav-menu">
+        <a  href="index.html" style="margin-left: 50px;" class="nav-item"><img src="./images/logo.png" alt=""></a>
+
+            <a href="yoliv-properties.html" class="nav-item"><li>
+                Explore</li></a>
+            <a href="#" class="nav-item"><li>
+                About us</li></a>
+        </ul>
+
+
+        
+            <div class="button-parrot">
+                <button class="book-button" onclick="window.location.href='Booking-form.html'">Book Now!
+                <div class="parrot"></div>
+                <div class="parrot"></div>
+                <div class="parrot"></div>
+                <div class="parrot"></div>
+                <div class="parrot"></div>
+                <div class="parrot"></div>
+                </button>
+
+
+            
+            </div>
+
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
 
+        <div class="mobile-logo" >
+            <a  href="index.html" style="margin-left: 50px;" class="nav-item"><img src="./images/logo.png" alt=""></a>
+            </div>
     </nav>
-
     <main style="background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.384), rgba(0, 0, 0, 0.367))">
-        <section style=" height: 100vh; width: 100vw; display: flex; flex-direction: column; background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(247, 241, 76, 0.299))">
+        <section id="booking-form">
             <form class="form" action="https://formspree.io/f/mleqrkyr"
             method="POST">
                 <div class="title" style="font-size: 34px; font-family: 'Plus Jakarta Sans', sans-serif;">Book A Slot<br><span style="font-size: 20px; text-align: center; ">Fill the details</span></div>
@@ -74,17 +103,17 @@
               </form>
         </section>
     </main>
+
+   
     <footer>
         <div style="display: flex; gap: 100px;height: 20vh;">
-            <img src="./images/logo1.png" alt="" style="margin-left: 100px; justify-content: center;">
-
-            <div
-                style="display: flex;  justify-content: center; align-items: center; gap: 70px; margin-left: 100px; text-decoration: none; ">
+            <img class="logo" src="./images/logo1.png" alt="" style="">
+    
+            <div class="footer-nav-links">
                 <a href="yoliv-properties.html">Explore</a>
                 <a href="#">About us</a>
-
             </div>
-
+    
             <div class="social-media-links">
                 <a href="#"><img src="./images/instagram.png" alt=""></a>
                 <a href="#"><img src="./images/linkedin.png" alt=""></a> 
@@ -93,5 +122,28 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector(".nav-menu");
+      
+      hamburger.addEventListener("click", mobileMenu);
+      
+      function mobileMenu() {
+       hamburger.classList.toggle("active");
+       navMenu.classList.toggle("active");
+      }
+      
+      const navLink = document.querySelectorAll(".nav-link");
+      
+      navLink.forEach(n => n.addEventListener("click", closeMenu));
+      
+      function closeMenu() {
+       hamburger.classList.remove("active");
+       navMenu.classList.remove("active");
+      }
+      
+      </script>
+
 </body>
 </html>
