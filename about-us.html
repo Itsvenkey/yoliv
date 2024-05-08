@@ -15,12 +15,6 @@
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 
-<style>
-
-
-
-</style>
-
 <body>
 
    
@@ -128,34 +122,8 @@
 
 
     <script>
-        const carouselContainer = document.querySelector('.carousel-container');
-let isScrolling = false; // Flag to prevent conflicts
-
-function autoScroll() {
-if (isScrolling) return; // Don't scroll if user is interacting
-
-isScrolling = true;
-carouselContainer.scrollLeft += carouselContainer.offsetWidth; // Scroll by image width
-
-if (carouselContainer.scrollLeft >= carouselContainer.scrollWidth - carouselContainer.offsetWidth) {
-carouselContainer.scrollLeft = 0; // Reset scroll position
-}
-
-setTimeout(() => { isScrolling = false; autoScroll(); }, 4000); // Repeat after 3 seconds
-}
-
-// Touch interaction (similar to previous solution)
-let touchStartX = null;
-let touchEndX = null;
-
-// ... handleTouchStart, handleTouchEnd, handleGesture (from previous solution) 
-
-// Initial call to start the auto-scrolling
-autoScroll();
-
-
-
-const hamburger = document.querySelector(".hamburger");
+    
+    const hamburger = document.querySelector(".hamburger");
       const navMenu = document.querySelector(".nav-menu");
       
       hamburger.addEventListener("click", mobileMenu);
