@@ -207,10 +207,14 @@ nav {
 #benefit .outer-container{
     display: flex;
     width: 100vw;
+    margin-left:-5%;
 }
 
 #benefit .inner-container{
-    display:grid; grid-template-columns: repeat(2, 1fr); grid-column-gap: 80px; margin-top: 100;
+    display:grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    grid-column-gap: 80px; 
+    margin-top: 100;
 }
 
 
@@ -515,6 +519,7 @@ cursor: pointer;
 position: relative;
 transition: 0.2s ease-in-out;
 letter-spacing: 2px;
+margin-top: -10px;
 
 }
 
@@ -835,6 +840,7 @@ grid-template-columns: repeat(4,1fr);
 .nav-item{
     align-self: center;
     text-decoration: none;
+    justify-content: center;
     color: rgba(0, 0, 0, 0.453);
 }
 
@@ -859,7 +865,7 @@ nav ul{
     list-style-type: none;
 }
 .navbar{
-    display: flex; gap:40px; position: fixed; width: 100vw; padding-top: 20px; align-items: center; align-content: center;
+    display: flex; gap:40px; position: fixed; width: 100vw; padding-top: 25px; align-items: center; align-content: center;
 }
 .mobile-logo{
     display: none;
@@ -1095,4 +1101,16 @@ width: 100vw;
 margin: 0 0.5%;
     min-width: 100vw; /* Ensure images take up full viewport width */
     /* margin-right: 20px; Example for spacing */
+}
+
+#about-us{
+    text-align: center;
+    height: auto;
+    width: 100vw;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}
+
+.mobile-video{
+    display: none;
 }
