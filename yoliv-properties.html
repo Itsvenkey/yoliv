@@ -1,27 +1,24 @@
 <html>
 
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-      <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+ <link rel="stylesheet" href="styles.css">
+ <link rel="stylesheet" href="mediaqueries.css">
 
 
-      
-    <style>
-      .button {
-  margin-left: 100px;
-
-}
-
-    </style>
 </head>
 <body>
+  
     
-    <nav style="display: flex; gap:40px; position:fixed; top: 0;" class="navbar navbar-expand-lg navbar-light ">
+    <!-- <nav style="display: flex; gap:40px; position:fixed; top: 0;" class="navbar navbar-expand-lg navbar-light ">
       <a class="navbar-brand" href="index.html" style="margin-left: 50px;"><img src="./images/logo.png" alt=""></a>
 
       <div class="navbar-nav" style="display: flex; gap: 40px;">
@@ -43,12 +40,51 @@
           </a>
         </div>
 
-  </nav>
+  </nav> -->
 
+
+  <nav class="navbar">
+
+
+    <ul  class="nav-menu" style="display: flex; gap: 60px;">
+    <a  href="index.html" style="margin-left: 50px;" class="nav-item"><img src="./images/logo.png" alt=""></a>
+
+        <a href="yoliv-properties.html" class="nav-item"><li>
+            Explore</li></a>
+        <a href="#" class="nav-item"><li>
+            About us</li></a>
+    </ul>
+
+
+    
+        <div class="button-parrot">
+            <button class="book-button" onclick="window.location.href='Booking-form.html'">Book Now!
+            <div class="parrot"></div>
+            <div class="parrot"></div>
+            <div class="parrot"></div>
+            <div class="parrot"></div>
+            <div class="parrot"></div>
+            <div class="parrot"></div>
+            </button>
+
+
+        
+        </div>
+
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <div class="mobile-logo" >
+        <a  href="index.html" style="margin-left: 50px;" class="nav-item"><img src="./images/logo.png" alt=""></a>
+        </div>
+</nav>
 
     <main>
-
-        <section id="property-listings">
+ 
+        <section id="properties">
             <div>
                 <div class="main-heading">
                     Our Properties
@@ -57,7 +93,7 @@
             </div>
 
 
-            <div style="margin-left: 20px; display: grid; grid-template-columns: repeat(3,1fr); grid-row-gap:120px; margin-left: 100px; justify-content: center;align-items: center; margin-top: 50px;">
+            <div class="card-container">
                 
               <article class="article-wrapper" onclick="window.location.href='Nova-page.html';">
                     <div class="rounded-lg">
@@ -165,15 +201,15 @@
             </div>
 
 
-                <a href="Booking-form.html"> <button class="button type1" type="button">
+                <button class="button type1" type="button" onclick="window.location.href='Booking-form.html'" >
                     <span class="btn-txt">Book Now</span>
-                  </button></a>
+                  </button>
 
         </section>
 
     </main>
 
-    <footer>
+    <!-- <footer>
       <div style="display: flex; gap: 100px;height: 20vh;">
           <img src="./images/logo1.png" alt="" style="margin-left: 100px; justify-content: center;">
 
@@ -191,7 +227,50 @@
               <a href="#"><img src="./images/twitter.png" alt=""></a>
           </div>
       </div>
-  </footer>
+  </footer> -->
+
+
+  <footer>
+    <div style="display: flex; gap: 100px;height: 20vh;">
+        <img class="logo" src="./images/logo1.png" alt="" style="">
+
+        <div class="footer-nav-links">
+            <a href="yoliv-properties.html">Explore</a>
+            <a href="#">About us</a>
+        </div>
+
+        <div class="social-media-links">
+            <a href="#"><img src="./images/instagram.png" alt=""></a>
+            <a href="#"><img src="./images/linkedin.png" alt=""></a> 
+            <a href="#"><img src="./images/facebook.png" alt=""></a>
+            <a href="#"><img src="./images/twitter.png" alt=""></a>
+        </div>
+    </div>
+</footer>
+
+<script>
+  const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", mobileMenu);
+
+function mobileMenu() {
+ hamburger.classList.toggle("active");
+ navMenu.classList.toggle("active");
+}
+
+const navLink = document.querySelectorAll(".nav-link");
+
+navLink.forEach(n => n.addEventListener("click", closeMenu));
+
+function closeMenu() {
+ hamburger.classList.remove("active");
+ navMenu.classList.remove("active");
+}
+
+</script>
+
+
 </body>
 
 </html>
