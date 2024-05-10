@@ -15,7 +15,9 @@
 
 
 </head>
-
+<style>
+    
+</style>
 
 <body>
 
@@ -118,30 +120,30 @@
                 </div>
 
                 <div class="inner-container">
-                    <div class="sub-inner-container">
+                    <div class="sub-inner-container animate-main-heading">
                         <img src="./images/home icon.png" alt="" >
-                        <p class="main-heading">Essentials Nearby</p>
+                        <p class="main-heading ">Essentials Nearby</p>
                         <p class="mini-heading">Get all the essentials near your locations and always get what you
                             need whenever you need.</p>
 
                     </div>
-                    <div class="sub-inner-container">
+                    <div class="sub-inner-container animate-main-heading">
                         <img src="./images/dollar icon.png" alt="">
-                        <p class="main-heading">Best Price</p>
+                        <p class="main-heading ">Best Price</p>
                         <p class="mini-heading">Not sure what you should be charging for your property? No need to
                             worry, let us do the numbers for you.</p>
 
                     </div>
-                    <div class="sub-inner-container">
+                    <div class="sub-inner-container animate-main-heading">
                         <img src="./images/home icon.png" alt="">
-                        <p class="main-heading">Lowest Commission</p>
+                        <p class="main-heading ">Lowest Commission</p>
                         <p class="mini-heading">You no longer have to negotiate commissions and haggle with other
                             agents it only cost 2%!</p>
 
                     </div>
-                    <div class="sub-inner-container">
+                    <div class="sub-inner-container animate-main-heading">
                         <img src="./images/home icon.png" alt="">
-                        <p class="main-heading">Overall Control</p>
+                        <p class="main-heading ">Overall Control</p>
                         <p class="mini-heading">You can communicate directly with landlords and we provide you with
                             images before you buy or rent the property.</p>
 
@@ -406,6 +408,25 @@
         </div>
     </footer>
 
+    <script>
+        // JavaScript to add sliding-in animation to main headings using Intersection Observer
+        document.addEventListener('DOMContentLoaded', () => {
+          const mainHeadings = document.querySelectorAll('.animate-main-heading');
+          const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('main-heading-visible');
+                observer.unobserve(entry.target); // Stop observing once animated
+              }
+            });
+          }, { threshold: 0.5 });
+    
+          // Observe each main heading
+          mainHeadings.forEach(heading => {
+            observer.observe(heading);
+          });
+        });
+      </script>
 <script src="scripts.js"></script>
     
 </body>
