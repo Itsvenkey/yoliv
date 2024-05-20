@@ -154,8 +154,9 @@ nav {
     left: 0;
     position: fixed;
     z-index: 100000;
-    backdrop-filter: blur(10px);
-    background: rgba(221, 238, 255, 0.622);
+    backdrop-filter: blur(25px);
+    /* background: rgba(221, 238, 255, 0.622); */
+    background: #fffdd095;
     height: 10vh;
     padding-top: 100px;
     width: 100vw;
@@ -897,8 +898,8 @@ nav ul{
     height: auto;
     padding-top: 15vh;
     padding-bottom: 5vh;
-    background-image: linear-gradient(to bottom, rgba(247, 241, 76, 0.299), rgba(255, 255, 255, 0));
-   
+    /* background-image: linear-gradient(to bottom, rgba(247, 241, 76, 0.299), rgba(255, 255, 255, 0)); */
+    background-image: linear-gradient(to bottom, rgba(247, 241, 76, 0.299), rgba(247, 241, 76, 0.299));
     justify-content: center;
     align-items: center;
 }
@@ -936,7 +937,9 @@ margin: 0;
     padding-bottom: 10vh;
     display: flex; 
     flex-direction: column; 
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(247, 241, 76, 0.299))
+    /* background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(247, 241, 76, 0.299)); */
+    background-image: linear-gradient(to bottom, rgba(247, 241, 76, 0.299), rgba(247, 241, 76, 0.299));
+
 }
 
 
@@ -949,7 +952,9 @@ margin: 0;
     text-align: center;
     padding-bottom: 50px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.148),rgba(0, 0, 0, 0.664));
-    background-color: rgba(0, 0, 0, 0.148);
+    /* background-color: rgba(0, 0, 0, 0.148); */
+    background-image: linear-gradient(to bottom, rgba(247, 241, 76, 0.299), rgba(247, 241, 76, 0.299))
+
 }
 
 
