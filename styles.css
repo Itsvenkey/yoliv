@@ -474,7 +474,9 @@ border-radius: 10px;
 -webkit-transform: rotate(-45deg);
 -ms-transform: rotate(-45deg);
 transform: rotate(-45deg);
-background-color: #f7f14c98;
+/* background-color: #f7f14c98; */
+background-color: #f7ca4eac;
+
 
 }
 
@@ -522,7 +524,9 @@ padding: 3px 7px;
 border-radius: 15px;
 font-size: 12px;
 letter-spacing: -0.6px;
-background-color: #f7f14c98; 
+/* background-color: #f7f14c98;  */
+background-color: #f7ca4eac;
+
 color: #000000;
 }
 
@@ -533,6 +537,8 @@ height: 50px;
 padding: 9px;
 -webkit-transition: all 0.3s ease;
 transition: all 0.3s ease;
+background-color: #f7ca4eac;
+
 
 }
 .button-parrot{
@@ -688,7 +694,9 @@ position: absolute;
 left: 0;
 top: 0;
 transition: all 0.5s ease-in-out;
-background-color: #debb10c8;
+/* background-color: #debb10c8; */
+background-color: #ffc72a;
+;
 border-radius: 30px;
 visibility: hidden;
 height: 10px;
