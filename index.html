@@ -26,8 +26,9 @@
 
 
         <ul  class="nav-menu">
-            <img src="./images/logo.png" style="margin-left: 50px; margin-top: 10px;" class="nav-item" alt="" onclick="window.location.href='index.html'">
-
+            <div class="nav-image-container">
+                <img src="./images/logo.png" style="margin-left: 50px; margin-top: 10px;" class="nav-item" alt="" onclick="window.location.href='index.html'">
+              </div>
             <a href="yoliv-properties.html" class="nav-item"><li>
                 Explore</li></a>
             <a href="about-us.html" class="nav-item"><li>
@@ -56,24 +57,24 @@
             <span class="bar"></span>
         </div>
 
-        <div class="mobile-logo" >
-            <img src="./images/logo.png" alt="" class="nav-item" onclick="window.location.href='index.html'">
-            </div>
+       
+                <div class="mobile-logo" >
+                    <img src="./images/logo.png" alt="" class="nav-item" onclick="window.location.href='index.html'">
+                    </div>
+            
     </nav>
 
     <main>
 
         <section id="section-1">
-            <video class="desktop-video" autoplay muted loop playsinline>
+            <!-- <video class="desktop-video" autoplay muted loop playsinline>
                 <source src="./images/Kimi no Na wa 【ＡＭＶ】 Find You  [Antisocial Contest](720P_HD).mp4" type="video/mp4">
-                <!-- Add additional source elements for other video formats (e.g., WebM, OGG) -->
                 Your browser does not support the video tag.
             </video>
             <video class="mobile-video" autoplay muted loop playsinline>
                 <source src="./images/Yo Liv Reel.mp4" type="video/mp4">
-                <!-- Add additional source elements for other video formats (e.g., WebM, OGG) -->
                 Your browser does not support the video tag.
-            </video>
+            </video> -->
 
 
 
@@ -92,11 +93,11 @@
                 </div>
 
                 <div class="button-container">
-                    <button class="animated-button" disabled>Navrangpura</button>
-                    <button class="animated-button" disabled>Shyamal</button>
-                    <button class="animated-button" disabled>Paladi</button>
-                    <button class="animated-button" disabled>Ambawadi</button>
-                    <button class="animated-button" disabled>Satellite</button>
+                    <button class="animated-button"  onclick="window.location.href='Navrangpura-properties.html'">Navrangpura</button>
+                    <button class="animated-button" onclick="window.location.href='Shyamal-properties.html'">Shyamal</button>
+                    <button class="animated-button" onclick="window.location.href='Paldi-properties.html'">Paldi</button>
+                    <button class="animated-button" onclick="window.location.href = 'Ambawadi-properties.html'">Ambawadi</button>
+                    <button class="animated-button" onclick="window.location.href='Satellite-properties.html'">Satellite</button>
                 </div>
 
                 <div
@@ -115,8 +116,18 @@
 
                   
 
-                    <img src="./images/house.png" alt="" style="width:300px; margin-top: 70px;">
+                    <img class="house-logo" src="./images/house.png" alt="" style="width:300px; margin-top: 70px;">
 
+                    <div class="carousel-container"> 
+
+                        <img src="./images/dining.png" alt="Image 1">
+                  
+                        <img src="./images/nova/cupboards.jpg" alt="Image 2">
+                     
+                      
+                        <img src="./images/nova/beds.jpg" alt="Image 3">
+                      
+                      </div>
                 </div>
 
                 <div class="inner-container">
@@ -421,6 +432,34 @@
     </footer>
 
     <script>
+
+
+const carouselContainer = document.querySelector('.carousel-container');
+let isScrolling = false; // Flag to prevent conflicts
+
+function autoScroll() {
+if (isScrolling) return; // Don't scroll if user is interacting
+
+isScrolling = true;
+carouselContainer.scrollLeft += carouselContainer.offsetWidth; // Scroll by image width
+
+if (carouselContainer.scrollLeft >= carouselContainer.scrollWidth - carouselContainer.offsetWidth) {
+carouselContainer.scrollLeft = 0; // Reset scroll position
+}
+
+setTimeout(() => { isScrolling = false; autoScroll(); }, 4000); // Repeat after 3 seconds
+}
+
+// Touch interaction (similar to previous solution)
+let touchStartX = null;
+let touchEndX = null;
+
+// ... handleTouchStart, handleTouchEnd, handleGesture (from previous solution) 
+
+// Initial call to start the auto-scrolling
+autoScroll();
+
+
         // JavaScript to add sliding-in animation to main headings using Intersection Observer
         document.addEventListener('DOMContentLoaded', () => {
           const mainHeadings = document.querySelectorAll('.animate-main-heading');

@@ -75,7 +75,8 @@ content: "";
     nav{
         height: 9%;
         /* background: rgb(221, 238, 255); */
-        background: #fbf27695;
+        /* background: #fbf27695; */
+        background-color: #ffc72a;
 
         /* background-image: linear-gradient(to bottom, rgba(255, 240, 153, 1), rgba(247, 241, 76, 0.299)); */
         color: white; 
@@ -83,6 +84,11 @@ content: "";
     box-shadow: 0px 0px 25px #0000007a;
 
     }
+
+  
+    .navbar{
+    display: flex; gap:40px; position: fixed; width: 100vw; padding-top: 0px; align-items: center; align-content: center;
+}   
   
       .nav-menu {
           position: fixed;
@@ -115,7 +121,7 @@ content: "";
       .hamburger {
           display: block;
           cursor: pointer;
-          padding-bottom: 10px;
+          /* padding-bottom: 10px; */
           position:fixed;
           left:30px;
       }
@@ -132,13 +138,19 @@ content: "";
       }
   
       .mobile-logo{
-          display: initial;
+          display: flex;
           position: absolute;
           right: 20px;
-          padding-left: 0;
-          margin-top: -10px;
-          scale: 0.8;
+        background-color: white;
+        justify-content: center;
+        width: 125px;
+        height: 90px;
+        margin-right: -20px;        
       }
+      .house-logo{
+        display: none;
+      }
+
   
       
   
@@ -147,7 +159,7 @@ content: "";
           height: 100vh;
           width: 100vw;
           padding-bottom: 0;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.725), rgba(0, 0, 0, 0.9));
+    /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.725), rgba(0, 0, 0, 0.9)); */
 
       }
       
