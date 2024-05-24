@@ -151,7 +151,7 @@ nav img {
     background:white;
     width: 150px;
     margin-left: -20;
-    height: 75px;
+    height: 10vh;
 }
 
 nav {
@@ -883,7 +883,7 @@ grid-template-columns: repeat(4,1fr);
     align-self: center;
     text-decoration: none;
     justify-content: center;
-    color: rgba(0, 0, 0, 0.453);
+    color: rgb(0, 0, 0);
 }
 
 
