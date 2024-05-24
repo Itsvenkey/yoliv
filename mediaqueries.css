@@ -30,7 +30,12 @@
         background-color: #f7f14c98;
     }
 
-   
+.testimonials-container div:nth-child(3){
+    display: none;
+}
+.testimonials-container div:nth-child(4){
+    display: none;
+}
 
     nav img{
     filter: none;
@@ -110,6 +115,7 @@ content: "";
       display: none; 
   } 
   
+
   .nav-menu a:nth-child(2){
       padding-top: 60px;
   }
@@ -286,6 +292,9 @@ content: "";
       display: none;
   }
 
+  #benefit video{
+    width: 100vw;
+  }
   #tenants-and-landlords .book-button{
     display:initial;
     background: transparent;
@@ -305,6 +314,8 @@ width: 50%;
 height: 5%;
     
 }
+
+
 
 #tenants-and-landlords .button-parrot{
   
