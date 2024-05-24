@@ -80,7 +80,7 @@
                 Your browser does not support the video tag.
             </video> -->
 
-            <img src="images/bg.jpg" alt="">
+            <img src="images/bg.jpg" alt="" >
 
 
             <div>
@@ -122,18 +122,13 @@
 
                   
 
-                    <img class="house-logo" src="./images/house.png" alt="" style="width:300px; margin-top: 70px;">
+                    <!-- <img class="house-logo" src="./images/house.png" alt="" style="width:300px; margin-top: 70px;"> -->
+                    <video autoplay muted loop playsinline style="width: 500px; height: 500px;">
+                        <source src="./images/web video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
 
-                    <div class="carousel-container"> 
-
-                        <img src="./images/dining.png" alt="Image 1">
-                  
-                        <img src="./images/nova/cupboards.jpg" alt="Image 2">
-                     
-                      
-                        <img src="./images/nova/beds.jpg" alt="Image 3">
-                      
-                      </div>
+                    
                 </div>
 
                 <div class="inner-container">
@@ -443,30 +438,6 @@
     <script>
 
 
-const carouselContainer = document.querySelector('.carousel-container');
-let isScrolling = false; // Flag to prevent conflicts
-
-function autoScroll() {
-if (isScrolling) return; // Don't scroll if user is interacting
-
-isScrolling = true;
-carouselContainer.scrollLeft += carouselContainer.offsetWidth; // Scroll by image width
-
-if (carouselContainer.scrollLeft >= carouselContainer.scrollWidth - carouselContainer.offsetWidth) {
-carouselContainer.scrollLeft = 0; // Reset scroll position
-}
-
-setTimeout(() => { isScrolling = false; autoScroll(); }, 4000); // Repeat after 3 seconds
-}
-
-// Touch interaction (similar to previous solution)
-let touchStartX = null;
-let touchEndX = null;
-
-// ... handleTouchStart, handleTouchEnd, handleGesture (from previous solution) 
-
-// Initial call to start the auto-scrolling
-autoScroll();
 
 
         // JavaScript to add sliding-in animation to main headings using Intersection Observer

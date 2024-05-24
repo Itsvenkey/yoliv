@@ -36,7 +36,7 @@ footer{
 }
 
 
-video {
+#section-1 video {
     position: absolute;
     top: 0;
     left: 0;
@@ -53,6 +53,7 @@ video {
     height: 100%    ;
     opacity: 0.5;
     object-fit: cover;
+    
     z-index: -1; /* Place the video behind other content */
 }
 
@@ -1133,7 +1134,7 @@ border-color: #000000a2;
 
 
 .carousel-container {
-    display: none; /* Allow horizontal arrangement */
+display: none; /* Allow horizontal arrangement */
 flex-wrap: nowrap; /* Prevent wrapping onto multiple lines */
 overflow-x: auto; /* Enable horizontal scrolling */
 -webkit-overflow-scrolling: touch; /* Smooth scrolling on WebKit browsers */
