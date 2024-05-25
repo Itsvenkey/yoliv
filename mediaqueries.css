@@ -27,7 +27,9 @@
     }
 
     .article-wrapper .project-hover{
-        background-color: #f7f14c98;
+        /* background-color: #f7f14c98; */
+background-color: #f7ca4eac;
+
     }
 
 .testimonials-container div:nth-child(3){
@@ -74,7 +76,9 @@ content: "";
 
 
 .button{
-    background-color: rgba(231, 208, 0, 0.816);
+    /* background-color: rgba(231, 208, 0, 0.816); */
+    background-color: #f7ca4eac;
+
 }
     
     nav{
@@ -238,7 +242,9 @@ content: "";
   }
   
   #property-listings button{
-    background-color: #fff82fba;
+    /* background-color: #fff82fba; */
+background-color: #f7ca4eac;
+
   }
   
   
@@ -247,7 +253,7 @@ content: "";
   margin: 0;
     flex-shrink: 0; /* Prevent cards from shrinking smaller than their content */
     margin-right: 20px; /* Space between the cards */
-    height: 375px;
+    height: 400px;
     width: 252px;
   }
 
