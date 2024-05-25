@@ -39,6 +39,7 @@ background-color: #f7ca4eac;
     display: none;
 }
 
+
     nav img{
     filter: none;
 
@@ -223,7 +224,7 @@ content: "";
     height: 50;
     width: 50;
   }
-  
+
   
   #property-listings .card-container {
     display: flex; /* Allow horizontal arrangement */
@@ -510,7 +511,6 @@ background-color: #debb10c8;
     text-align: center;
     font-size: small;
     margin-left: 0;
-
     width: 100%;
 }
   }
