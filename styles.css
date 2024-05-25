@@ -24,6 +24,8 @@ footer{
     justify-content: center;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: hidden;
     height: 100vh;
     width: 100vw;
     background-repeat: no-repeat;
@@ -228,7 +230,8 @@ nav {
 }
 
 #benefit {
-    
+    overflow-x: hidden;
+    overflow-y: hidden;
     width: 100vw;
     height: auto;
     padding-bottom: 6%;
@@ -320,6 +323,8 @@ nav {
 #property-listings {
     width: 100vw;
     height: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
     
     /* background-image: linear-gradient(to bottom, rgba(247, 241, 76, 0.299), rgba(255, 255, 255, 0)); */
     /* background-image: linear-gradient(to bottom, rgba(247, 241, 76, 0.299), rgba(222, 184, 135, 0.153)); */
@@ -1234,6 +1239,8 @@ margin: 0 0.5%;
 #testimonials {
    
     width: 100vw;
+    overflow-x: hidden;
+    overflow-y: hidden;
     height: auto;
     text-align: center;
     padding-top: 30px;
